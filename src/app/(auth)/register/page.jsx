@@ -6,7 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 
 export default function Login() {
-  const { user, setUser, signInUser, setLoading } = useAuth();
+  const { user, setUser, signInUser, setLoading, googleSignIn } = useAuth();
 
   const router = useRouter();
 
@@ -32,12 +32,25 @@ export default function Login() {
       });
   };
 
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((res) => {
+        toast.success("Google registration successful");
+        setUser(res.user);
+        router.push("/");
+      })
+      .catch(() => {});
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-[#111] border border-gray-800 rounded-xl p-8 shadow-lg">
         <h1 className="text-3xl font-semibold text-center mb-6">Register</h1>
         {/* Google Login Button */}
-        <button className="w-full py-3 rounded-lg bg-white text-black font-medium hover:bg-gray-200 transition mb-4">
+        <button
+          onClick={handleGoogleSignIn}
+          className="w-full py-3 rounded-lg bg-white text-black font-medium hover:bg-gray-200 transition mb-4"
+        >
           <div className="flex justify-center items-center gap-2">
             <FcGoogle className="text-3xl"></FcGoogle>{" "}
             <span className="text-2xl font-bold">Continue with Google</span>

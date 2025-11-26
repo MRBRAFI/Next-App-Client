@@ -1,12 +1,19 @@
+"use client";
+
+import { FaFacebook } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer className="bg-black text-gray-300 py-10 mt-20">
       <div className="max-w-6xl mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Left side */}
         <div className="text-center md:text-left">
-          <h2 className="text-xl font-semibold text-white">My App</h2>
+          <h2 className="text-2xl font-semibold text-orange-500">
+            CourseVerse
+          </h2>
           <p className="text-sm text-gray-400 mt-1">
-            Building modern web experiences.
+            Building modern web troops with our courses.
           </p>
         </div>
 
@@ -28,14 +35,14 @@ export default function Footer() {
 
         {/* Social Icons */}
         <div className="flex gap-4 text-lg">
-          <a href="#" className="hover:text-white transition">
-            🐦
+          <a
+            href="https://www.facebook.com/m.r.b.rafi.2025"
+            className="hover:text-white transition"
+          >
+            <FaFacebook></FaFacebook>
           </a>
           <a href="#" className="hover:text-white transition">
-            📘
-          </a>
-          <a href="#" className="hover:text-white transition">
-            📸
+            <FaGitAlt></FaGitAlt>
           </a>
         </div>
       </div>
