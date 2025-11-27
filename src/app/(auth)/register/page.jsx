@@ -16,19 +16,15 @@ export default function Login() {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    console.log({ email, password });
-
     signInUser(email, password)
       .then((res) => {
         setUser(res.user);
-        console.log(user);
         toast.success("Account creation successful");
         router.push("/");
         setLoading(false);
       })
       .catch((err) => {
         toast.error("Please enter valid credentials");
-        console.log(err);
       });
   };
 

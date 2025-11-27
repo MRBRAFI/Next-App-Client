@@ -21,19 +21,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Links */}
-        <div className="flex md:-ml-60 gap-6 text-xl">
-          <Link href="/" className="hover:text-white transition">
-            Home
-          </Link>
-          <Link href="/about" className="hover:text-white transition">
-            About
-          </Link>
-          <Link href="/contact" className="hover:text-white transition">
-            Contact
-          </Link>
-        </div>
-
         {/* Social Icons */}
         <div className="flex gap-4 text-lg">
           <a
