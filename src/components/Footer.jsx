@@ -1,36 +1,37 @@
 "use client";
 
+import Link from "next/link";
 import { FaFacebook } from "react-icons/fa";
 import { FaGitAlt } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-300 py-10 mt-20">
-      <div className="max-w-6xl mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="bg-black py-10">
+      <div className="w-11/12 mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Left side */}
         <div className="text-center md:text-left">
-          <h2 className="text-2xl font-semibold text-orange-500">
+          <Link
+            href={"/"}
+            className="text-2xl font-black bg-white px-5 py-3 rounded text-purple-600"
+          >
             CourseVerse
-          </h2>
-          <p className="text-sm text-gray-400 mt-1">
+          </Link>
+          <p className="text-xl text-gray-400 mt-5">
             Building modern web troops with our courses.
           </p>
         </div>
 
         {/* Links */}
-        <div className="flex gap-6 text-sm">
-          <a href="#" className="hover:text-white transition">
+        <div className="flex md:-ml-60 gap-6 text-xl">
+          <Link href="/" className="hover:text-white transition">
             Home
-          </a>
-          <a href="#" className="hover:text-white transition">
+          </Link>
+          <Link href="/about" className="hover:text-white transition">
             About
-          </a>
-          <a href="#" className="hover:text-white transition">
+          </Link>
+          <Link href="/contact" className="hover:text-white transition">
             Contact
-          </a>
-          <a href="#" className="hover:text-white transition">
-            Support
-          </a>
+          </Link>
         </div>
 
         {/* Social Icons */}
@@ -39,10 +40,13 @@ export default function Footer() {
             href="https://www.facebook.com/m.r.b.rafi.2025"
             className="hover:text-white transition"
           >
-            <FaFacebook></FaFacebook>
+            <FaFacebook className="text-2xl"></FaFacebook>
           </a>
-          <a href="#" className="hover:text-white transition">
-            <FaGitAlt></FaGitAlt>
+          <a
+            href="https://github.com/MRBRAFI"
+            className="hover:text-white transition"
+          >
+            <FaGitAlt className="text-2xl"></FaGitAlt>
           </a>
         </div>
       </div>

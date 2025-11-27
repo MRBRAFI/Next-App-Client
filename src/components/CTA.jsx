@@ -3,7 +3,7 @@ import { SiPushbullet } from "react-icons/si";
 export default function CTA() {
   return (
     <section className="bg-linear-to-b from-[#080808] via-[#0c0c0c] to-[#111827] text-white">
-      <div className="max-w-6xl mx-auto px-6 md:px-10 py-16 md:py-24">
+      <div className="w-11/12 mx-auto px-6 md:px-10 py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* LEFT — TEXT CONTENT */}
           <div className="space-y-6">
@@ -20,7 +20,7 @@ export default function CTA() {
 
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
               <a
-                href="/register"
+                href="/products"
                 className="inline-flex items-center justify-center px-5 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 text-black font-semibold transition"
                 aria-label="Get started with CourseVerse"
               >
