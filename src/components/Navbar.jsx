@@ -82,6 +82,25 @@ export default function Navbar() {
                     My Coureses
                   </Link>
                 </li>
+
+                <div className="block md:hidden">
+                  <li className="border-2 rounded p-2 text-left mt-2">
+                    <Link
+                      href={"/"}
+                      className="hover:cursor-pointer font-mono text-xl bg-orange-600 px-2 py-1 rounded text-orange-white"
+                    >
+                      Home
+                    </Link>
+                  </li>
+                  <li className="border-2 rounded p-2 text-left mt-2">
+                    <Link
+                      href={"/products"}
+                      className="hover:cursor-pointer font-mono text-xl bg-orange-600 px-2 py-1 rounded text-orange-white"
+                    >
+                      All Courses
+                    </Link>
+                  </li>
+                </div>
                 <li className="border-2 rounded p-2 text-left mt-2">
                   <button
                     className="hover:cursor-pointer font-mono text-xl bg-purple-600 px-2 py-1 rounded text-orange-white"
@@ -90,25 +109,6 @@ export default function Navbar() {
                     Logout
                   </button>
                 </li>
-
-                <div className="block md:hidden">
-                  <li>
-                    <Link
-                      href={"/"}
-                      className="hover:cursor-pointer md:text-xl md:bg-orange-300 md:px-2 py-1 rounded md:text-teal-800"
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={"/products"}
-                      className="hover:cursor-pointer md:text-xl md:bg-orange-300 md:px-2 py-1 rounded md:text-teal-800"
-                    >
-                      All Courses
-                    </Link>
-                  </li>
-                </div>
               </ul>
             </div>
           </div>

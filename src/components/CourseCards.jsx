@@ -2,7 +2,6 @@
 import Link from "next/link";
 
 export default function CourseCard({ user }) {
-  console.log(user);
   return (
     <div className="flex justify-center items-center">
       <div
