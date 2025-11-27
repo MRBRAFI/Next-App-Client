@@ -15,7 +15,7 @@ export default function MyCourses() {
     if (!loading && user) {
       const fetchCourses = async () => {
         try {
-          const res = await fetch("http://localhost:5000/users", {
+          const res = await fetch("https://next-app-server.vercel.app/users", {
             cache: "no-store",
           });
           const data = await res.json();
@@ -46,9 +46,12 @@ export default function MyCourses() {
       if (result.isConfirmed) {
         setDeletingId(id);
         try {
-          const res = await fetch(`http://localhost:5000/users/${id}`, {
-            method: "DELETE",
-          });
+          const res = await fetch(
+            `https://next-app-server.vercel.app/users/${id}`,
+            {
+              method: "DELETE",
+            }
+          );
 
           if (!res.ok) throw new Error("Failed to delete course");
 

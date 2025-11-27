@@ -12,7 +12,9 @@ export default function Home() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch("http://localhost:5000/users?limit=6");
+        const res = await fetch(
+          "https://next-app-server.vercel.app/users?limit=6"
+        );
         if (!res.ok) throw new Error("Failed to fetch users");
 
         const data = await res.json();

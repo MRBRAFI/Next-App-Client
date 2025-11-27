@@ -10,7 +10,7 @@ export default function AllProducts() {
 
   useEffect(() => {
     const fetchCourses = async () => {
-      const res = await fetch("http://localhost:5000/users", {
+      const res = await fetch("https://next-app-server.vercel.app/users", {
         cache: "no-store",
       });
       const data = await res.json();

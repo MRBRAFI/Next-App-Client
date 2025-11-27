@@ -3,7 +3,7 @@ import Link from "next/link";
 export default async function ProductsDetails({ params }) {
   const { id } = await params;
 
-  const res = await fetch(`http://localhost:5000/users/${id}`, {
+  const res = await fetch(`https://next-app-server.vercel.app/users/${id}`, {
     cache: "no-store",
   });
 
